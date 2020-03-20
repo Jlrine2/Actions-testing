@@ -27,7 +27,7 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       
     - name: build and push
-      run: docker build -t jlrine2/testing && docker push jlrine2/testing
+      run: docker build -t jlrine2/testing . && docker push jlrine2/testing
   deploy:
     
     runs-on: ubuntu-latest
