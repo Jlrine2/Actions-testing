@@ -28,12 +28,7 @@ jobs:
       
     - name: build and push
       run: docker build -t jlrine2/testing . && docker push jlrine2/testing
-  deploy:
-    
-    runs-on: ubuntu-latest
-    # get kubeconfig from DigitalOcean API
-    steps:
-    - uses: actions/checkout@v2
+
     - name: save kubeconfig
       uses: digitalocean/action-doctl@master
       env:
