@@ -42,5 +42,3 @@ jobs:
       
     - name: deploy to k8s
       run: kubectl --kubeconfig=$GITHUB_WORKSPACE/.kubeconfig apply -f $GITHUB_WORKSPACE/k8s.yaml
-}
-      
